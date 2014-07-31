@@ -1,0 +1,139 @@
+/*@import url(//fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic);*/
+article,aside,details,figcaption,figure,header,hgroup,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
+audio:not([controls]){display:none;height:0;}[hidden]{display:none;}
+dfn{font-style:italic;}
+pre{margin:1em 0; white-space:pre;white-space:pre-wrap;word-wrap:break-word}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+q{quotes:none}
+q:before,q:after{content:'';content:none}
+code,kbd,pre,samp{font-family:monospace, serif;_font-family:'courier new', monospace;font-size:1em}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-0.5em}sub{bottom:-0.25em}
+/*dl,menu,ol,ul{margin:1em 0}*/
+/*dd{margin:0 0 0 40px}*/
+nav ul,nav ol{list-style-image:none}
+figure{margin:0}
+blockquote{margin:1em 40px}
+mark{background:#ff0;color:#666666}
+legend{border:0;padding:0;white-space:normal;*margin-left:-7px}
+
+
+
+/*html {font-size:100%;background:#fff;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}*/
+ body, button, iframe,p,span,menu, ul,ol,li,table,th,td,form,label, dd { padding:0; margin:0; text-align:left; font-family:Verdana,"굴림",Gulim,  Arial,Helvetica,sans-serif; font-size:12px;color:#666666;letter-spacing:-0.03em;}
+a {border:0;  color:#333333; text-decoration:none;}
+
+strong, B, .B {font-weight:bold;}
+img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root)
+form{margin:0}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em; padding:0;border:0}
+button,input,select,textarea{vertical-align:baseline;*vertical-align:middle}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button:-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea {font-family:Verdana,"굴림",Gulim, Arial,Helvetica,sans-serif; font-size:12px; color:#333333; line-height:150%;  letter-spacing:-0.05em;overflow:auto;vertical-align:top}
+
+input {ime-mode:active; padding:0 2px; margin:0; vertical-align:middle;}
+body{height:100%}
+ul,ol,li {list-style:none;}
+
+h1, h2 {margin:0;}
+
+select {padding:1px 0 2px 0; font-family:Verdana,"굴림",Gulim, Arial,Helvetica,sans-serif; font-size:12px; color:#666666;}
+table {width:100%; border:0; border-spacing:0; border-collapse:collapse;}
+td.R {padding:7px 3px 7px 3px !important; text-align:right !important;}
+td.L {padding:3px 7px !important; text-align:left !important;}
+td.C {padding-left:0 !important; padding-right:0 !important;}
+
+
+
+.both {clear:both;}
+.fR {float:right; text-align:right;}
+.fL {float:left;}
+.bd1 {border:#DADADA 1px solid;}
+.bd5 {border:#fff000 5px solid;}
+.automargin {margin:0 auto;}
+.valignm {*vertical-align:middle;}
+.L {text-align:left;}
+.C {text-align:center !important;}
+.R {text-align:right;}
+.T {vertical-align:top;}
+.dpI{display:inline !important}
+.no-spacing {letter-spacing:0;}
+.spacing-05 {letter-spacing:-0.05em;}
+.hand {cursor:pointer; cursor:hand;}
+.no_bd {border:0 !important;}
+.no_bg {background:none !important; padding:10px 0 0 0 !important;}
+.no_bbg {border-bottom:0 !important;}
+
+.h15 {height:15px !important;}
+
+.w100fL {width:100px !important; float:left;}
+.w100 {width:100px;}
+.w150 {width:150px;}
+.w200 {width:200px;}
+.w300 {width:300px;}
+.w280 {width:280px;}
+.w250 {width:250px;}
+.w230 {width:230px;}
+
+.mT3 {margin-top:3px;}
+.mT5 {margin-top:5px;}
+.mT10 {margin-top:10px;}
+.mT20 {margin-top:20px;}
+
+.mR5 {margin-right:5px;}
+.mR10 {margin-right:10px;}
+
+.mB10 {margin-bottom:10px;}
+
+.mL5 {margin-left:5px;}
+.mL10 {margin-left:10px;}
+.mL15 {margin-left:15px;}
+.mL20 {margin-left:20px;}
+.mL-20 {margin-left:-20px;}
+
+.mB20 {margin-bottom:20px;}
+
+.t_deco {text-decoration:underline;}
+.t_base {color:#333333 !important; letter-spacing:0 !important;}
+.t_red01 {color:#d6495a !important;}
+.t_orange01 {color:#ee7000 !important;}
+.t_yellow01 {color:#e29e00 !important;}
+.t_blue01 {color:#10589c !important;}
+.t_blue02 {color:#0095da !important;}
+.t_gray01 {color:#575757 !important;}
+.t_gray02 {color:#C5C5C5 !important;}
+.t_gray03 {color:#888888 !important;}
+.t_white {color:#ffffff !important;}
+.t_ing {color:#08a698 !important;}
+.t_stop {color:#e89494 !important;}
+.t_normal {font-weight:normal !important;}
+/*.t_new {color:#3c3c97 !important;}*/
+.tbg01 {background:#eff2ff;}
+.tbg02 {background:#eefffb;}
+
+/*.page {font-stretch:ultra-expanded;}*/
+.page a.on {color:#1e88bd; }
+.page {margin-top:15px; text-align:center; font-weight:bold;}
+.page a {color:#999999; margin:0 3px;}
+.page img {vertical-align:top; margin-top:1px;}
+
+
+/*
+text-decoration:underline; - 밑줄
+text-decoration:overline; = 윗줄긋기</p>
+text-decoration:line-through; = 가운데줄긋기</p>
+vertical-align:sub;color:red;font-size:17pt = 아래첨자</font>
+vertical-align:normal;color:red;font-size:17pt = 보통 (스타일없음)
+vertica-align:super;color=blue;font-size:14pt;= 위첨자</font>
+letter-spacing:3px; font-size:20px;=글자와 글자 사이 간격
+word-spacing:30px; font-size:20px; = 단어와 단어 사이의 간격
+line-height:150%; font-size:20px; = 줄간견으로 px과 %로 줄수 있음
+text-transform:capitalize; = 영문자의 첫 글자만 대문자로 변화 sdagasdg agasdg</font>
+text-transform:uppercase; = 영문자의 모든 글자를 대문자로 변화 sDagasdg aGasdg</font> 
+text-indent:20%; = 문자열 들여쓰기 !-- cm,pt,%등이 올수 있음-
+{white-space:nowrap} /*자동 줄바꿈 방지
+*/

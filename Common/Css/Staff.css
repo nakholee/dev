@@ -1,0 +1,341 @@
+/*
+
+1. relative
+  - 자신의 현재 위치를 기준으로 이동한다. 
+  - 자신이 있던 공간을 다른 Element가 침범하지 못한다. 
+2. absolute
+  - 자신을 포함하는 상위 조상 Element 중에서 기본 위치가 아닌 포지션 설정값을 가진 가장 가까운 Element를 기준으로 이동한다. 
+     * 부모 element의  위치지정(position) 속성을 relative 로 지정해야 한다. 그렇지 않으면 엉뚱한 놈을 기준으로 삼을 수 있다.
+  - 원래 자신이 차지하고 있던 공간이 사라진다. 즉 다른 Element가 해당 공간을 차지한다. 
+  ]
+*/ 
+body.AdmBody{min-width:0;width:auto;}
+
+/*
+rs-responsive => AdmBody
+mg-login => AdmLogin
+rs-container => AdmContainer
+*/
+
+.AdmLogin {padding:20px 0;}
+/*.AdmLogin .AdmContainer {max-width:1200px;}*/
+.AdmLogin {min-height:0}
+.AdmLogin .AdmContainer{max-width:620px;min-width:400px;margin:150px auto; } /* position:absolute; top:50%; height:250px; margin-top:-180px; left:50%; margin-left:-310px;*/
+
+
+body.AdmBody .AdmContainer{width:auto;}
+/*body.AdmBody .AdmContainer{padding:0 10px}*/
+
+/* container */ 
+.AdmContainer:before,.AdmContainer:after{content:"";display:table;}
+.AdmContainer:after{clear:both;}.AdmContainer{zoom:1;}
+
+/* loginimg */
+.AdmLoginImg {width:132px;height:34px;background:url(/Images/Staff/AdmLogin.png) 0 0; display:inline-block;text-indent:-9999px;line-height:1} /*background-size:500px 500px;*/
+
+
+.rs-main{margin-top:30px;position:relative;}
+.rs-main:before,.rs-main:after{content:"";display:table;}
+.rs-main:after{clear:both;}
+.rs-main{zoom:1;}
+
+/* login area */
+.rs-main .rs-content {min-height:0;}
+.rs-content:before,.rs-content:after{content:"";display:table;}
+.rs-content:after{clear:both;}.rs-content{zoom:1;}
+.rs-content{min-height:0px;} /* 0px;*/
+.rs-main .rs-content  {background:#fff;-webkit-box-shadow:#c2c2c2 0px 3px 8px 1px;-moz-box-shadow:#c2c2c2 0px 3px 8px 1px;box-shadow:#c2c2c2 0px 3px 8px ;}
+
+.rs-main .rs-content .rs-inner{margin:18px;}
+.rs-inner:before,.rs-inner:after{content:"";display:table;}
+.rs-inner:after{clear:both;}.rs-inner{zoom:1;}
+
+/* 브라우저 창 크기에 따라서 로고 영역 사이즈 지정 01 */
+@media screen and (min-width: 600px){
+.rs-logo{width:250px; height:125px;   background:url("/Images/Staff/RadionodeCI.png") no-repeat ;}
+.rs-logo:before,.rs-logo:after{content:"";display:table;}
+.rs-logo:after{clear:both;}.rs-logo{zoom:1;}
+
+}
+/* 브라우저 창 크기에 따라서 로고 영역 사이즈 지정 02 */
+@media screen and  (max-width: 590px) and (min-width: 500px) {
+
+.rs-logo{width:170px; height:85px;  background:url("/Images/Staff/RadionodeCI.png") no-repeat ; }
+
+.rs-logo:before,.rs-logo:after{content:"";display:table;}
+.rs-logo:after{clear:both;}.rs-logo{zoom:1;}
+
+}
+
+/* 로그인 필드  */
+.rs-login-group{width:300px; } /*width:300px;*/
+.rs-control-label{width:65px; background:url(../Images/Staff/AdmLoginDot.png) 1px 11px no-repeat; no-repeat; padding-top:5px; padding-left:15px;}
+.rs-controls {margin-left:10px;}
+.rs-input-large{width:125px;}
+.rs-checkbox  {padding-left:10px;}
+
+/* 로그인 버튼 */
+.rs-loginbtnarea {width:62px;height:62px;}
+.rs-loginbtnarea p {
+width:60px;height:43px;
+vertical-align:middle;
+text-align:center;
+font-size:13px; color:#fff;
+padding-top:17px;
+margin-top:8px;
+line-height:140% !important; border:#005dc1 1px solid; font-weight:bold !important;;  cursor:pointer; cursor:hand;
+background: #5291d6; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #5291d6 0%, #0159bd 51%, #5291d6 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#5291d6), color-stop(51%,#0159bd), color-stop(100%,#5291d6)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg, #5291d6 0%,#0159bd 51%,#5291d6 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg, #5291d6 0%,#0159bd 51%,#5291d6 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg, #5291d6 0%,#0159bd 51%,#5291d6 100%); /* IE10+ */
+background: linear-gradient(135deg, #5291d6 0%,#0159bd 51%,#5291d6 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5291d6', endColorstr='#5291d6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.admlogin-msgbox {float:left; width:295px;}
+.admlogin-msgbox .info{height:14px; padding:5px; border:#e5e5e5 1px solid; background:#f6f6f6; color:#666666;}
+
+.wrap {width:1000px; margin:0 auto;}
+
+/* header */ 
+#header_body {background:url(/Images/Staff/Header_bg.png) repeat-x !important;}
+.header {position:relative; height:42px; color:#1e88bd; font-weight:bold; padding-top:23px;  } /*position:Fixed; */
+.header .topmenubox {width:40%; height:25px; padding-top:7px; letter-spacing:0; }
+.header .topmenubox a {color:#1e88bd; }
+.header .topmenubox span {font-family:"굴림",Gulim; margin-top:6px; margin-left:5px;font-size:11px; letter-spacing:0; color:#1e88bd;} /*height:28px; padding-top:2px; margin-right:9px; */
+.header .topmenubox:after{clear:both;}
+.header .logo{width:194px;height:31px;background:url("/Images/Staff/Top_Logo.jpg") no-repeat center;display:inline-block ;text-indent:-9999px;}
+/*.header .logo{max-width:170;height:31px;background:url("/Images/Staff/Top_Logo.jpg")  ; margin:0 auto; position:relative;}*/
+.header .logo:after{clear:both;}
+
+
+
+/*---------- 1Depth ----------*/
+#menubar .onedepth {position:relative;   margin-top:12px; margin-bottom:12px;color:#666666; }/*padding-right:12px;*/
+#menubar .onedepth li {
+float:left;
+
+vertical-align:middle;
+text-align:center;
+font-size:13px; 
+margin-left:15px;	
+padding:7px 15px;
+line-height:140% !important; font-family:'맑은고딕', Malgun Gothic !important; font-size:14px;  cursor:pointer; cursor:hand; font-weight:bold !important;
+}
+
+
+#menubar .onedepth li:hover,.onedepth li.on {
+float:left;
+vertical-align:middle;
+text-align:center;
+font-size:13px;
+margin-left:15px;
+padding:7px 15px;
+line-height:140% !important; font-family:'맑은고딕', Malgun Gothic !important; font-size:14px; color:#fff; cursor:pointer; cursor:hand; font-weight:bold !important;
+background: #4c8ed3; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #4c8ed3 0%, #03579f 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#4c8ed3), color-stop(100%,#03579f)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg, #4c8ed3 0%,#03579f 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg, #4c8ed3 0%,#03579f 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg, #4c8ed3 0%,#03579f 100%); /* IE10+ */
+background: linear-gradient(135deg, #4c8ed3 0%,#03579f 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c8ed3', endColorstr='#03579f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.threedepth {padding-top:5px;}
+
+/*---------- sub ----------*/
+.Outbbox_unusual {width:720px; line-height:150%; float:left;}
+.lnbbox_unusual {width:280px; line-height:150%;}
+.lnbbox_base {float:left; width:180px; margin-right:40px; line-height:150%;}
+.subcon_base {float:left; width:780px;}
+.subcon_unusual {width:695px; margin-left:25px;} /* sub - right*/
+
+/* LNB :  sub - left member list */ 
+.lnbbox_unusual .tapmenu li.Lon a, .lnbbox_unusual .tapmenu li.Ron a {font-weight:bold; color:#00529d;}
+.lnbbox_unusual .tapmenu li a:hover {color:#00529d;}
+.lnbbox_unusual .tapcon h2 {height:24px; padding:6px 0 0 15px; margin-bottom:5px; font-size:12px; font-weight:bold; color:#ffffff; background:url(/Images/Staff/UnLeftBlueTitleBg.jpg) no-repeat;}
+.lnbbox_unusual .tapcon h3 {margin:0 0 10px 15px; padding-left:12px; font-size:11px; font-weight:bold; color:#000000; background:url(/Images/Staff/UnLeftBlueH3.jpg) 0 8px no-repeat;}
+.lnbbox_unusual .sear_list th.first {background:none #8dcceb !important;}
+.lnbbox_unusual .sear_list th {color:#1e88bd; padding:3px 0 1px 0 !important; text-align:center; background:url(/Images/Staff/ListTitleBar.jpg) no-repeat scroll left bottom #8dcceb;}
+.lnbbox_unusual .tapmenu {height:45px; background:url(/Images/Staff/UnLeftTbg.jpg) bottom no-repeat;}
+.lnbbox_unusual .tapmenu li {width:135px; height:35px; padding-top:10px; text-align:center; float:left; }
+.lnbbox_unusual .tapmenu li.Lon {width:143px; height:30px; padding-top:15px; background:url(/Images/Staff/UnLeftLonbg.jpg) no-repeat;}
+.lnbbox_unusual .tapmenu li.Ron {width:143px; height:30px; padding-top:15px; background:url(/Images/Staff/UnLeftRonbg.jpg) no-repeat;}
+.lnbbox_unusual .tapcon {background:url(/Images/Staff/UnLeftBg.jpg) repeat-y;}
+.lnbbox_unusual .tapcon h2 .ps_no {float:right;margin-right:20px;}
+.lnbbox_unusual .tapcon h2 .ps_no span {font-size:11px !important; color:#fff; letter-spacing:-0.08em;}
+.lnbbox_unusual h3 span.name {float:left; margin:5px 5px 0 0;}
+/*
+.lnbbox_unusual .stu_check {padding:0 0 10px 0;}
+.lnbbox_unusual .stu_check input {margin:2px 3px 0 13px; float:left;}
+.lnbbox_unusual .stu_check span {float:left;}
+*/
+.lnbbox_unusual .select {padding:0 15px 15px 0;}
+.lnbbox_unusual .select select {width:85px; margin-right:5px; color:#333333; float:left;}
+.lnbbox_unusual .select input {width:150px; height:15px; padding:2px; border:#797979 1px solid; font-size:11px; color:#333333; float:left;}
+.lnbbox_unusual .select p {width:55px; height:17px; padding-top:3px; margin-left:5px; text-align:center; font-weight:bold; cursor:pointer; cursor:hand; background:url(/Images/Staff/UnLeftBtnBg.jpg) no-repeat; float:right;}
+.lnbbox_unusual .select p a {color:#ffffff;}
+.lnbbox_unusual .bottom {height:15px; margin-top:30px; background:url(/Images/Staff//UnLeftBbg.jpg) no-repeat;}
+.lnbbox_unusual .listbox {width:250px; margin:0 15px 15px 15px;}
+.lnbbox_unusual .standard {height:20px; padding-top:5px; }
+.lnbbox_unusual .standard img {margin:0 3px 0 5px;}
+.lnbbox_unusual .standard img.first {margin:0 3px 0 0;}
+.lnbbox_unusual .sear_list {}
+.lnbbox_unusual .sear_list td {position:relative; padding:3px 0 3px 0px; text-align:center; border-left:#797979 1px solid; border-bottom:#797979 1px solid;}
+
+/* LNB :  sub - left other */ 
+.threedepth {border-top:#00529d 1px solid;}
+.threedepth li {padding:9px 30px 7px 10px; font-weight:bold; letter-spacing:-1px; border-bottom:#dedede 1px solid;}
+.threedepth li a:hover {color:#00529d;}
+.threedepth li.on01 {padding:8px 27px 4px 10px; border-bottom:#00529d 3px solid; background:url(/Images/Staff/ThreeDepthBg_On01.jpg) no-repeat;}
+.threedepth li.on02 {padding:5px 27px 2px 7px; border:#00529d 3px solid; background:url(/Images/Staff/ThreeDepthBg_On02.jpg) no-repeat;}
+.threedepth li.on01 a, .threedepth li.on02 a {color:#00529d;}
+
+
+/*4 뎁스 */
+.tapMlist {border:#E3E3E3 5px solid !important; margin-bottom:10px;}
+.tapMlist td {padding:10px 10px 8px 10px !important;}
+.tapMlist div {}
+.tapMlist div{background:url(/Images/Staff/BoardiconBlue.gif) 0 6px no-repeat #ffffff; letter-spacing:0; padding:1px 15px; border:0; float:left;}
+.tapMlist div.on a {color:#1e88bd; font-weight:bold;}
+
+/* location text */
+.routebox {height:20px; margin-top:5px; text-align:right;}
+.routebox span {height:16px; padding:4px 15px 0 7px; font-weight:bold; float:right; background:url(/Images/Staff/RouteIconArr.gif) right no-repeat;}
+.routebox span a {font-weight:normal;}
+.routebox span.here {background:none; padding:4px 0 0 7px;}
+
+/* tab */
+.tapbox {height:35px; border-left:#dedede 1px solid; border-bottom:#dedede 1px solid; margin-bottom:10px;}
+.tapbox li {height:15px; background:#f7f6f7; padding:10px 8px 9px 8px; border-top:#dedede 1px solid; border-right:#dedede 1px solid; float:left;}
+.tapbox li a {color:#939393;}
+.tapbox li.on {font-weight:bold; color:#1e88bd; padding:8px 8px 8px 6px; border-top:#1e88bd 3px solid; background:none;}
+.tapbox li.on a, .tapbox li a:hover {color:#1e88bd;}
+
+
+/*search */
+.searchbox {margin-bottom:10px; padding:0 20px; border:#939393 1px solid;}
+.searchbox table td {height:40px; padding:0 15px 0 15px; vertical-align:top; border-bottom:#bcbcbc 1px solid; background:url(/Images/Staff/SearchBar.gif) 0 13px no-repeat;}
+.searchbox table td span {margin-top:2px;}
+.searchbox table td.first { padding:0 15px 0 0; background:none;}
+.searchbox table td.last { padding:0 0 0 25px; background:none;}
+.searchbox table select {margin:10px 5px 0 0;}
+.searchbox table input {padding:2px; margin-top:10px; border:#bcbcbc 1px solid; font-size:11px; color:#666666;}
+.searchbox table .many {margin-right:5px; float:left;}
+.searchbox table th {font-weight:normal; padding:12px 0 10px 9px; line-height:130%;}
+.searchbox table th p {line-height:140% !important; border:#c8c8c8 1px solid; padding:2px 14px 0 14px; font-weight:bold !important;; background:url(/Images/Staff/SearchBtnBg.jpg) bottom repeat-x; float:right; cursor:pointer; cursor:hand;}
+.searchbox table td span {padding:13px 10px 5px 20px; font-size:12px; background:url(/Images/Staff/iConSearch.gif) 0 13px no-repeat; float:left;}
+.searchbox table th p a, .searchbox table th p {color:#1e88bd;}
+
+/*btn area */
+.topbtnbox {height:30px;}
+.topbtnbox p {border:#939393 2px solid; background:#e1e1e1; padding:2px 10px 1px 10px; margin-right:5px; float:left; cursor:pointer; cursor:hand;}
+.topbtnbox span {padding:10px 0 0 35px; float:right;}
+
+/* list - member */
+
+.data td, .listbox .data td {padding:7px 10px 7px 10px; text-align:left; border-bottom:#797979 1px solid;}
+.data textarea {width:95%; height:40px; line-height:150%; padding:3px 5px; border:#939393 1px solid; font-size:12px;}
+.data img {float:left; vertical-align:middle;}
+.data .radio {width:auto !important; border:0; margin:0 3px 0 5px; float:left;}
+
+
+/* list - other  */
+.listbox {}
+.listbox tr.on {background:#f3f3f3; cursor:pointer; cursor:hand;}
+.listbox tr.off {background:#ffffff;}
+.listbox table {border-top:#1e88bd 2px solid; line-height:180%;}
+.listbox table th.top {padding:7px 0 5px 0; text-align:center; color:#ffffff; background:url(/Images/Staff/ListTitleBar.jpg) bottom left no-repeat #00529d;}
+.listbox table th.first {background:none #00529d !important;}
+.listbox table th.left {padding:7px 0; text-align:center; font-weight:bold; color:#ffffff; background:#00529d; border-bottom:#1e88bd 1px solid;}
+.listbox table td a:hover {color:#1e88bd; text-decoration:underline;}
+.listbox table p:hover {color:#333333; text-decoration:none !important;}
+.listbox table td {padding:5px 0; text-align:center; border-left:#797979 1px solid; border-bottom:#797979 1px solid;}
+.listbox table td.first {border-left:0 none !important;}
+.listbox table td.L {padding-left:10px !important; text-align:left;}
+/*.listbox table .cke_editor {border:0 !important;}*/
+/*.listbox table .cke_top {border:0 !important;}*/
+/*.listbox table p {border:#dedede 2px solid; background:#fafafa; padding:1px 7px 2px 7px; margin-top:2px; cursor:pointer; cursor:hand;}
+.listbox table p a:hover {color:#333333 !important; text-decoration:none !important;}	*/
+.listbox table input {height:16px; padding:3px 2px 0 2px; font-size:11px;  border:#e1e1e1 1px solid;}
+.listbox table selec t {border:#e1e1e1 1px solid;}
+.listbox table td textarea {width:90%; height:90%; padding:7px 10px;}
+.listbox table td textarea.h_auto {height:auto !important;}
+.listbox .view {padding:10px; text-align:left; vertical-align:top;}
+.listbox .view p {height:auto; background:none; border:0; cursor:auto; text-indent:0; cursor:auto; padding:3px 0; margin:0;}
+.listbox .view span {float:inherit; display:inline; text-indent:0; padding:0; margin:0;}
+.listbox .view table {width:auto; margin:0; padding:0; border-top:0;}
+.listbox .view table td {border:0; padding:0; text-align:auto;}
+.listbox table td h1 {background:none !important; font-size:2em; height:auto; padding:0;}
+.listbox table td h2 {background:none !important; font-size:1.2em; height:auto; padding:0;}
+
+/*view*/
+.bottombtnbox {height:23px; padding-top:7px;}
+.bottombtnbox p {border:#939393 2px solid; background:#e1e1e1; padding:3px 10px 2px 10px; margin-left:5px; float:right; cursor:pointer; cursor:hand; color:#333333;}
+.bottombtnbox p.point {border:#1a93bf 2px solid; background:#ffffff; color:#1a93bf;}
+.bottombtnbox p.point a {color:#1a93bf;}
+
+
+/* sub - reply (comment) */
+.reply {margin-top:20px;}
+.reply h1 {height:24px !important; background:url(/Images/Staff/SubTbLine.gif) 0 8px repeat-x !important; padding:0 !important;}
+.reply .uploadbox {padding:10px; background:#eeeeee; margin-top:10px;}
+.reply .uploadbox input {font-size:12px; width:80%; color:#333333; padding:3px 10px 2px 10px; border:#dedede 2px solid; float:left;}
+.reply .uploadbox .tarea_t {font-size:12px; font-weight:bold; color:#333333; padding:15px 10px 0 0; float:left;}
+.reply .uploadbox textarea {width:80%; height:30px; line-height:130%; padding:5px; border:#939393 1px solid; font-size:11px; color:#333333; float:left;}
+.reply .re_list li {padding:10px; border-bottom:#939393 1px dotted;}
+.reply .re_list .writer {color:#333333; margin-bottom:5px;}
+.reply .re_list .writer .name {padding-top:2px; color:#333333; float:left;}
+.reply .re_list .writer .time {padding:2px 15px 0 5px; color:#ababab; float:left;}
+.reply .re_list .writer img {margin-left:5px; float:left;}
+.reply .re_list p {line-height:120% !important; font-weight:normal !important; border:#dedede 2px solid; background:#fafafa; padding:3px 7px 0 7px;  cursor:pointer; cursor:hand;}
+
+.txtdata{padding:3px 0; float:left}
+
+/*
+.listbox table th.nobottom {border-bottom:#797979 1px solid !important;}
+
+.listbox .file {margin:5pa 0; background:url(/images/contents/list_icon_file.gif) 0 4px no-repeat; padding-left:13px;}
+.listbox .file_add {margin:5pa 0; background:url(/images/contents/list_icon_file.gif) 20px 4px no-repeat;}
+.listbox .file_add .checkbox {float:left; border:none; width:auto; margin:1px 15px 0 0;}
+*/
+
+.subcon_base .listbox .tapbox {height:auto; border:#E3E3E3 5px solid; padding:10px 0px 7px 10px; margin-bottom:10px;}
+.subcon_base .listbox .tapbox select {font-size:11px; border:#797979 1px solid; color:#333333; margin:0 5px 0 0;}
+.subcon_base .listbox .tapbox li {background:url(/image/STAFF/popup/phone_blue.gif) 0 2px no-repeat #ffffff; padding:2px 15px; border:0; float:left;}
+.subcon_base .listbox .tapbox li.on a {color:#1e88bd; font-weight:bold;}
+
+.subcon_unusual .listbox .tapbox, .subcon_folder .listbox .tapbox {height:auto; border:#E3E3E3 5px solid; padding:10px 10px 7px 10px; margin-bottom:10px;}
+.subcon_unusual .listbox .tapbox select {font-size:11px; border:#797979 1px solid; color:#333333; margin:0 5px 0 0;}
+.subcon_unusual .tapbox .monthbox {padding:5px; margin-bottom:3px; background:url(/image/Staff/contents/MonthBoxBg.gif) repeat-x; border-left:#000000 1px solid; border-right:#000000 1px solid; float:left;}
+.subcon_unusual .tapbox select.mon {margin-top:5px; font-size:12px; float:left;}
+.subcon_unusual .tapbox .month {background:url(/image/Staff/contents/MonthBg.gif) left top repeat-y #f1f1f1; padding-left:8px;}
+.subcon_unusual .tapbox .month li.on a {color:#ffffff !important;}
+.subcon_unusual .tapbox p {margin-top:5px;}
+.subcon_unusual .data th {text-align:center; padding:7px 0 5px 0; background:#00529d; border-bottom:#1e88bd 1px solid; color:#ffffff;}
+
+/* 공통 */
+.subcon_base h1, .subcon_unusual h1, .subcon_folder h1, .sub_all h1 {height:40px; background:url(/Images/Staff/SubconIConTitle.gif) 3px 2px no-repeat; padding-left:20px; font-size:14px; font-weight:bold; color:#231815;}
+.lnbbox_base h1, .lnbbox_unusual h1, .lnbbox_folder h1 {height:30px; margin-bottom:30px; padding-top:5px; font-family:'나눔고딕',NanumGothic, sans-serif !important; font-size:20px; color:#00529d; letter-spacing:-0.08em;}
+/*.subcon_base p, .subcon_basepop p, .lnbbox_folder .btn, .uploadbox p, .listbox table p {line-height:120% !important; font-weight:normal !important; border:#dedede 2px solid; background:#fafafa; padding:2px 7px 3px 7px;  cursor:pointer; cursor:hand;} /* .subcon_unusual p, */ 
+.subcon_unusual .data th, .subcon_base .data th, .listbox table th {text-align:center; padding:7px 0 5px 0; background:#00529d; border-bottom:#1e88bd 1px solid; color:#ffffff;}
+.subcon_unusual .data, .subcon_base .data {border-top:#1e88bd 2px solid;}
+.subcon_unusual td span, .subcon_base td span, .subcon_basepop td span, .subcon_folder td span {float:left;}
+.subcon_unusual .data, .subcon_base .data {border-top:#1e88bd 2px solid;}
+.subcon_unusual h2, .subcon_base h2, .subcon_basepop h2, .listbox h2, .subcon_folder h2 {background:url(/image/Staff/popup/H2Tbg.gif) 0 15px no-repeat; padding:10px; font-size:12px; font-weight:bold; color:#231815;}
+.subcon_unusual h3, .subcon_base h3, .subcon_basepop h3, {background:url(/image/Staff/popup/H3Tbg.gif) 0 10px no-repeat; padding:5px 10px 10px 10px; margin-left:5px; font-size:12px; font-weight:bold; color:#333333;}
+
+
+
+
+
+
+/*---------- footer ----------*/
+#footer {position:relative;height:55px; background:#bababa; margin-top:10px;  } /*border:#ff0000 2px solid;*/
+#footer .wrap {position:relative;}
+#footer .wrap .logo {margin-left:15px; float:left;}
+#footer .wrap .copylight { position:absolute; top:20px; left:343px;}
+#footer select {width:150px; padding:2px 5px;float:right; margin-top:16px;}
