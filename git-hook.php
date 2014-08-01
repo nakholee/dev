@@ -5,7 +5,7 @@ set_time_limit(0);
 
 try {
     $output = shell_exec("/var/www/html/test/git-puller.sh");
-    echo "<pre>$output</pre>";
+    echo "<pre>"+$output+"</pre>";
 }
 catch(Exception $e) {
     //log the error
