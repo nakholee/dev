@@ -1,4 +1,4 @@
 <?php
-    $output = system("/usr/libexec/git-core/git pull");
+    $output = shell_exec("/usr/bin/git pull 2>&1");
     echo "<pre>$output</pre>";
 ?>
